@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РумТибет</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/homepage.css">
+</head>
+<body>
+    <div class="hero">
+        <header class="header container">
+            <a href="#" class="header__logo">
+                <img 
+                    src="./assets/icons/logo.svg" 
+                    alt="logo" 
+                    class="header__logo-image"
+                    height="72"
+                    width="137"
+                />
+            </a>
+            <div class="header__actions">
+                <nav class="header__navigation">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#" class="header__link">Главная</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Про гида</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Программа тура</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Стоимость</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Блог</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="header__consultation-link">Консультация</a>
+            </div>
+            <div class="header__burger-button">
+                <span class="header__burger-button-line"></span>
+                <span class="header__burger-button-line"></span>
+                <span class="header__burger-button-line"></span>
+            </div>
+        </header>
+        <section class="registration container">
+            <h1 class="registration__title">Насладись прогулкой в горах с командой единомышленников</h1>
+            <form class="registration__form">
+                <div class="registration__input-wrapper">
+                    <div class="select-wrapper">
+                        <select name="location" id="location" class="registration__selection input">
+                            <option value="" disabled selected>Локация для тура</option>
+                            <option value="lake">Озеро возле гор</option>
+                            <option value="night">Ночь в горах</option>
+                            <option value="yoga">Йога в горах</option>
+                        </select>
+                    </div>
+                    <label for="location" class="registration__label">выберите из списка</label>
+                </div>
+                <div class="registration__input-wrapper">
+                    <div class="input-wrapper">
+                        <input type="text" class="registration__input input" id="dateRange" placeholder="Дата похода">
+                    </div>
+                    <label for="dateRange" class="registration__label">укажите диапазон</label>
+                </div>
+                <div class="registration__input-wrapper">
+                    <div class="select-wrapper">
+                        <select name="participants" id="participants" class="registration__selection input">
+                            <option value="" disabled selected>Участники</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <label class="registration__label" for="participants">минимум 4 человека</label>
+                </div>
+                <button type="submit" class="registration__button">Найти программу</button>
+            </form>
+            <a href="#" class="registration__link">Найти программу</a>
+        </section>
+    </div>
+</body>
+</html>
