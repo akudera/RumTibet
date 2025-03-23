@@ -106,24 +106,11 @@
  }
  
  /**
-   Обнуляем вертикальные внешние отступы параграфа,
-   объявляем локальную переменную для внешнего отступа вниз,
-   чтобы избежать взаимодействие с более сложным селектором
+   Обнуляем вертикальные внешние отступы параграфа
   */
  p {
-   --paragraphMarginBottom: 24px;
- 
    margin-block: 0;
- }
- 
- /**
-   Внешний отступ вниз для параграфа без атрибута class,
-   который расположен не последним среди своих соседних элементов
-  */
- p:where(:not([class]):not(:last-child)) {
-   margin-bottom: var(--paragraphMarginBottom);
- }
- 
+ } 
  
  /**
    Упрощаем работу с изображениями и видео
@@ -239,8 +226,9 @@
 
 
 :root {
-    --color-white: #ffffff20;
+    --color-transparent-white: #ffffff20;
     --color-light: #FDFDFD;
+    --color-background-light: #F3F5F4;
     --color-hover-light: #d6d4d4;
     --color-dark: #18121E;
     --color-dark-grin: #1A3E3E;
@@ -251,7 +239,6 @@
     --border-radius-button: 4px;
     --border-radius-card: 6px;
     --border-radius-input: 8px;
-    --border-radius-image-accent: 50% 0% / 50% 0%;
 
     --border: var(--color-light) solid 1px;
 
@@ -278,17 +265,42 @@
     overflow: hidden !important;
 }
 
+main section:nth-child(2n) {
+  background-color: var(--color-background-light);
+}
+
 body {
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: clamp(10px, 1.13vw, 14px);
-    line-height: 1.5;
+    font-size: 14px;
     color: var(--color-dark);
-    background-color: var(--color-light);
+    background-color: #FFFFFF;
 }
 
 .container {
     max-width: calc(var(--container-width) + var(--container-inline-padding) * 2);
     padding-inline: var(--container-inline-padding);
     margin-inline: auto;
+}
+
+.description {
+  font-size: clamp(16px, 1.45vw, 18px);
+}
+
+.link {
+    font-size: clamp(14px, 1.29vw, 16px);
+    color: var(--color-light);
+    padding: 1em 2.25em;
+    background-color: var(--color-dark-grin);
+    border-radius: var(--border-radius-button);
+    transition-duration: var(--transition-duration);
+    transition-property: background-color;
+
+    &:hover {
+        background-color: var(--color-hover-grin);
+    }
+}
+
+.link.link--small {
+    padding: 0.75em 1.5em;
 }

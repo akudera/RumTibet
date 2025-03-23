@@ -64,24 +64,6 @@
     }
 }
 
-.link {
-    font-size: clamp(14px, 1.29vw, 16px);
-    color: var(--color-light);
-    padding: 1em 2.25em;
-    background-color: var(--color-dark-grin);
-    border-radius: var(--border-radius-button);
-    transition-duration: var(--transition-duration);
-    transition-property: background-color;
-
-    &:hover {
-        background-color: var(--color-hover-grin);
-    }
-}
-
-.link.link--small {
-    padding: 0.75em 1.5em;
-}
-
 .header__burger-button {
     display: none;
     width: 30px;
@@ -122,7 +104,7 @@
     grid-template-columns: repeat(3, 1fr) auto;
     gap: 24px;
     width: 100%;
-    background-color: var(--color-white);
+    background-color: var(--color-transparent-white);
     backdrop-filter: blur(6px);
     padding: 40px 42px;
     border-radius: 10px;
@@ -220,7 +202,7 @@
     }
 }
 
-.explore {
+.explore__inner {
     display: flex;
     align-items: center;
     gap: 40px 120px;
@@ -281,14 +263,11 @@
     max-width: 580px;
 }
 
-.explore__body-title:not(:last-child) {
-    margin-bottom: 8px;
-}
-
 .title {
     color: var(--color-yellow);
     font-size: clamp(16px, 1.93vw, 24px);
     font-weight: 400;
+    margin-bottom: 8px;
 }
 
 .subtitle {
@@ -302,13 +281,111 @@
 }
 
 .explore__body-description {
-    font-size: clamp(16px, 1.45vw, 18px);
-    
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+.programs__inner {
+    display: flex;
+    align-items: center;
+    gap: 30px 90px;
+    padding-block: 80px 100px;
+}
+
+.programs__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 580px;
+}
+
+.programs__subtitle {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+.programs__description {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+.programs__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
 
     &:not(:last-child) {
         margin-bottom: 40px;
     }
 }
+
+.programs__item {
+    position: relative;
+    padding-left: 66px;
+}
+
+.programs__icon {
+    position: absolute;
+    right: calc(100% - 50px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.programs__item-title {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.programs__images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-height: 510px;
+}
+
+
+.program__card {
+    &:nth-child(1) {
+        border-radius: 0px 50px / 0px 50px;
+    }
+
+    &:nth-child(2) {
+        border-radius: 50px 0% / 50px 0px;
+    }
+
+    &:nth-child(3) {
+        border-radius: 50px 0px / 50px 0px;
+    }
+
+    &:nth-child(4) {
+        border-radius: 0px 50px / 0px 50px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .programs__inner {
+        flex-direction: column;
+    }
+
+    .programs__images {
+        grid-template-columns: repeat(4, 1fr);
+        width: 90%;
+
+        & .program__card {
+            border-radius: 0;
+            justify-self: center;
+        }
+    }
+
+    .programs__icon {
+        top: 0;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 1020px) {
     .input {
         padding-block: 10px;
@@ -321,7 +398,7 @@
         max-height: 42px;
     }
     
-    .explore {
+    .explore__inner {
         column-gap: 60px;
     }
 }
@@ -354,12 +431,12 @@
         max-width: max-content;
     }
 
-    .explore {
+    .explore__inner {
         flex-direction: column-reverse;
     }
 
-    .explore__body-link {
-        align-self: center;
+    .programs__images {
+        display: none;
     }
 }
 
@@ -415,6 +492,34 @@
     .explore__video-content-wrapper {
         padding: 0;
     }
+
+    .explore__body-link {
+        align-self: center;
+    }
+
+    .programs__link {
+        align-self: center;
+    }
+
+    .programs__subtitle {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .programs__description {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .programs__list {
+        row-gap: 32px;
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
 }
 
 @media (max-width: 442px) {
@@ -425,5 +530,9 @@
     .header__burger-button {
         width: 21px;
         height: 18px;
+    }
+
+    .container {
+        padding-block: 50px 
     }
 }
