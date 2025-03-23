@@ -241,10 +241,11 @@
 :root {
     --color-white: #ffffff20;
     --color-light: #FDFDFD;
+    --color-hover-light: #d6d4d4;
     --color-dark: #18121E;
     --color-dark-grin: #1A3E3E;
-    --color-gray: #a7a7a7;
-    --color-grin: #215746;
+    --color-hover-gray: #a7a7a7;
+    --color-hover-grin: #215746;
     --color-yellow: #F2BE22;
 
     --border-radius-button: 4px;
@@ -256,6 +257,7 @@
 
     --header-height: 72px;
     --container-width: 1180px;
+    --container-inline-padding: 16px;
 
     --transition-duration: 0.2s;
 
@@ -286,6 +288,7 @@ body {
 }
 
 .container {
-    max-width: var(--container-width);
+    max-width: calc(var(--container-width) + var(--container-inline-padding) * 2);
+    padding-inline: var(--container-inline-padding);
     margin-inline: auto;
 }
