@@ -280,6 +280,7 @@ body {
 .container {
     max-width: calc(var(--container-width) + var(--container-inline-padding) * 2);
     padding-inline: var(--container-inline-padding);
+    padding-block: 80px 100px;
     margin-inline: auto;
 }
 
