@@ -296,6 +296,7 @@ body {
     border-radius: var(--border-radius-button);
     transition-duration: var(--transition-duration);
     transition-property: background-color;
+    white-space: nowrap;
 
     &:hover {
         background-color: var(--color-hover-grin);

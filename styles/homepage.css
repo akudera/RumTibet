@@ -248,7 +248,7 @@
     aspect-ratio: 1;
     background: url(../assets/icons/play-button.svg) no-repeat center / contain;
     transition-duration: var(--transition-duration);
-    transition-property: width;    
+    transition-property: width;
 
     &:hover {
         width: 15.5%;
@@ -436,11 +436,11 @@
     }
 
     &:nth-child(2) .destinations__card {
-        background: url(../assets/images/card-background-image-2.jpg) no-repeat center / cover;
+        background: url(../assets/images/card-background-image-2.jpg) no-repeat center / cover var(--color-dark-grin);
     }
 
     &:nth-child(3) .destinations__card {
-        background: url(../assets/images/card-background-image-3.jpg) no-repeat center / cover;
+        background: url(../assets/images/card-background-image-3.jpg) no-repeat center / cover var(--color-dark-grin);
     }
 }
 
@@ -502,7 +502,118 @@
 .destinations__link-wrapper {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    
+    &.container {
+        padding-top: 50px;
+    }
+}
+
+.blogs__header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    
+    &:not(:last-child) {
+        padding-bottom: 40px;
+    }
+}
+
+.blogs__body {
+    &.container {
+        padding-top: 0;
+    }
+
+    &:not(:last-child) {
+        padding-bottom: 50px;
+    }
+}
+
+.blogs__blog-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.blogs__blog {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    min-width: 490px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 15px 0 #18121E12;
+    scroll-snap-align: start;
+}
+
+.blogs__blog-image {
+    border-radius: 6px;
+}
+
+.blogs__blog-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-block: 16px;
+}
+
+.blogs__blog-title-wrapper {
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+.blogs__blog-title {
+    font-family: 'NunitoSans-Bold', sans-serif;
+    font-size: clamp(20px, 1.94vw, 24px);
+    line-height: 1.3;
+}
+
+.blogs__blog-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.blogs__blog-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    font-family: 'NunitoSans-Bold', sans-serif;
+}
+
+.blogs__blog-time {
+    color: var(--color-yellow);
+}
+
+.blogs__blog-link {
+    color: var(--color-dark-grin);
+    white-space: nowrap;
+
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.blogs__link-wrapper {
+    display: flex;
+    justify-content: center;
+    
+    &.container {
+        padding-top: 0;
+    }
 }
 
 @media (max-width: 1080px) {
@@ -523,6 +634,10 @@
     .programs__icon {
         top: 0;
         transform: translateY(0);
+    }
+
+    .blogs__blog-wrapper {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -635,6 +750,28 @@
     .destinations__card-link {
         display: none;
     }
+
+    .blogs__blog {
+        flex-direction: column;
+        min-width: auto;
+        width: 285px;
+        padding: 0;
+    }
+
+    .blogs__blog-image {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    .blogs__blog-title-wrapper {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    .blogs__blog-footer {
+        padding-top: 16px;
+    }
 }
 
 @media (max-width: 642px) {
@@ -719,6 +856,14 @@
     .destinations__list {
         padding-top: 32px;
     }
+
+    .blogs__header {
+        align-items: flex-start;
+
+        &.container {
+            margin-inline: 0;
+        }
+    }
 }
 
 @media (max-width: 442px) {
@@ -732,7 +877,15 @@
     }
 
     main .container {
-        padding-block: 50px 
+        padding-block: 50px;
+    }
+
+    .blogs__header:not(:last-child) {
+        padding-bottom: 32px;
+    }
+
+    .blogs__body:not(:last-child) {
+        padding-bottom: 32px;
     }
 
     .destinations__link-wrapper.container {
