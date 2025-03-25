@@ -550,6 +550,7 @@
 
 .blogs__blog-image {
     border-radius: 6px;
+    object-fit: cover;
 }
 
 .blogs__blog-content {
@@ -756,6 +757,10 @@
         min-width: auto;
         width: 285px;
         padding: 0;
+    }
+
+    .blogs__blog-content {
+        padding-inline: 16px;
     }
 
     .blogs__blog-image {
