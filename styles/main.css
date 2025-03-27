@@ -254,6 +254,13 @@
     --font-family-accent: 'NunitoSans-Bold', sans-serif;
 }
 
+:focus-visible {
+  outline-offset: 3px;
+  outline-color: var(--color-dark);
+  outline-style: dashed;
+  outline-width: 3px;
+}
+
 .visually-hidden {
     position: absolute !important;
     width: 1px !important;
@@ -308,10 +315,12 @@ h4 {
 }
 
 .link {
+    font-family: 'NunitoSans-SemiBold', sans-serif;
     font-size: clamp(14px, 1.29vw, 16px);
     color: var(--color-light);
     padding: 1em 2.25em;
     background-color: var(--color-dark-grin);
+    border: none;
     border-radius: var(--border-radius-button);
     transition-duration: var(--transition-duration);
     transition-property: background-color;

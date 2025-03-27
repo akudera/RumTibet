@@ -6,6 +6,7 @@
     <title>РумТибет</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/homepage.css">
+    <link rel="shortcut icon" href="./assets/icons/logo.svg" type="image/x-icon">
 </head>
 <body>
     <div class="hero">
@@ -44,11 +45,11 @@
                 </nav>
                 <a href="#" class="header__consultation-link link link--small">Консультация</a>
             </div>
-            <div class="header__burger-button">
+            <button class="header__burger-button" type="button" aria-label="Открыть меню" title="Открыть меню">
                 <span class="header__burger-button-line"></span>
                 <span class="header__burger-button-line"></span>
                 <span class="header__burger-button-line"></span>
-            </div>
+            </button>
         </header>
         <section class="registration container">
             <h1 class="registration__title">Насладись прогулкой в горах с командой единомышленников</h1>
@@ -94,6 +95,9 @@
                             src="./assets/images/explore-back-image.jpg" 
                             alt="" 
                             class="explore__back-image"
+                            width="350"
+                            height="400"
+                            loading="lazy"
                         />
                         <video 
                             src="" 
@@ -101,7 +105,7 @@
                             class="explore__video"
                         >
                         </video>
-                        <button type="button" class="explore__play-button">
+                        <button type="button" class="explore__play-button" title="Воспроизвести видео">
                             <span class="visually-hidden">Воспроизвести видео</span>
                         </button>
                     </div>
@@ -132,6 +136,7 @@
                                 class="programs__icon"
                                 width="50"
                                 height="50"
+                                loading="lazy"
                             />
                             <h4 class="programs__item-title">Опытный гид</h4>
                             Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.
@@ -143,6 +148,7 @@
                                 class="programs__icon"
                                 width="50"
                                 height="50"
+                                loading="lazy"
                             />
                             <h4 class="programs__item-title">Безопасный поход</h4>
                             Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.
@@ -154,6 +160,7 @@
                                 class="programs__icon"
                                 width="50"
                                 height="50"
+                                loading="lazy"
                             />
                             <h4 class="programs__item-title">Лояльные цены</h4>
                             Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.
@@ -162,10 +169,38 @@
                     <a href="#" class="programs__link link">Стоимость программ</a>
                 </div>
                 <div class="programs__images">
-                    <img src="./assets/images/program-card-1.jpg" alt="Озеро в ущелье" class="program__card">
-                    <img src="./assets/images/program-card-2.jpg" alt="Мужчина на вершине ущелья" class="program__card">
-                    <img src="./assets/images/program-card-3.jpg" alt="Снежные вершины" class="program__card">
-                    <img src="./assets/images/program-card-4.jpg" alt="Высокие горы" class="program__card">
+                    <img 
+                        src="./assets/images/program-card-1.jpg" 
+                        alt="Озеро в ущелье" 
+                        class="program__card"
+                        width="250"
+                        height="250"
+                        loading="lazy"
+                    />
+                    <img 
+                        src="./assets/images/program-card-2.jpg" 
+                        alt="Мужчина на вершине ущелья" 
+                        class="program__card"
+                        width="250"
+                        height="250"
+                        loading="lazy"
+                    />
+                    <img 
+                        src="./assets/images/program-card-3.jpg" 
+                        alt="Снежные вершины" 
+                        class="program__card"
+                        width="250"
+                        height="250"
+                        loading="lazy"
+                    />
+                    <img 
+                        src="./assets/images/program-card-4.jpg" 
+                        alt="Высокие горы" 
+                        class="program__card"
+                        width="250"
+                        height="250"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         </section>
@@ -262,6 +297,7 @@
                             class="blogs__blog-image" 
                             width="230" 
                             height="280"
+                            loading="lazy"
                         />
                         <div class="blogs__blog-content">
                             <a href="#" class="blogs__blog-title-wrapper">
@@ -283,6 +319,7 @@
                             class="blogs__blog-image" 
                             width="230" 
                             height="280"
+                            loading="lazy"
                         />
                         <div class="blogs__blog-content">
                             <a href="#" class="blogs__blog-title-wrapper">
@@ -304,6 +341,7 @@
                             class="blogs__blog-image" 
                             width="230" 
                             height="280"
+                            loading="lazy"
                         />
                         <div class="blogs__blog-content">
                             <a href="#" class="blogs__blog-title-wrapper">
@@ -321,10 +359,11 @@
                     <article class="blogs__blog">
                         <img 
                             src="./assets/images/blog-image-4.jpg" 
-                            alt="Италия" 
+                            alt="Индия" 
                             class="blogs__blog-image" 
                             width="230" 
                             height="280"
+                            loading="lazy"
                         />
                         <div class="blogs__blog-content">
                             <a href="#" class="blogs__blog-title-wrapper">
@@ -359,6 +398,7 @@
                             class="experience__image image__wide" 
                             width="580" 
                             height="250"
+                            loading="lazy"
                         />
                         <img 
                             src="./assets/images/experience-image-2.jpg" 
@@ -366,6 +406,7 @@
                             class="experience__image" 
                             width="280" 
                             height="250"
+                            loading="lazy"
                         />
                         <img 
                             src="./assets/images/experience-image-3.jpg" 
@@ -373,6 +414,7 @@
                             class="experience__image" 
                             width="280" 
                             height="250"
+                            loading="lazy"
                         />
                     </div>
                     <div class="experience__images-row">
@@ -382,6 +424,7 @@
                             class="experience__image" 
                             width="280" 
                             height="250"
+                            loading="lazy"
                         />
                         <img 
                             src="./assets/images/experience-image-5.jpg" 
@@ -389,6 +432,7 @@
                             class="experience__image image__wide" 
                             width="580" 
                             height="250"
+                            loading="lazy"
                         />
                         <img 
                             src="./assets/images/experience-image-6.jpg" 
@@ -396,6 +440,7 @@
                             class="experience__image" 
                             width="280" 
                             height="250"
+                            loading="lazy"
                         />
                     </div>
                 </div>
@@ -405,5 +450,103 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer__form-wrapper">
+            <form class="footer__form container">
+                <header class="footer__form-header">
+                    <h2 class="footer__form-title subtitle">Получайте полезные рассылки о путешествиях</h2>
+                    <h3 class="footer__form-subtitle title">актуально</h3>
+                </header>
+                <div class="footer__form-body">
+                    <div class="footer__form-action">
+                        <div class="footer__form-input-wrapper">
+                            <label for="email" class="footer__form-label">Введите e-mail адрес</label>
+                            <input type="email" class="footer__form-input" id="email" placeholder="name@domain.com" name="email" autocomplete="on" required/>
+                        </div>
+                        <button class="footer__form-subscribe link link--small" type="submit">Подписаться на новости</button>
+                    </div>
+                    <div class="footer__form-agreement">
+                        <p>подписываясь на новости, вы автоматически соглашаетесь с <a href="#">условиями обработки персональных данных</a> и <a href="#">правилами рекламных рассылок</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer__main">
+            <div class="footer__main-inner container">
+                <div class="footer__info">
+                    <div class="footer__about">
+                        <h3 class="footer__about-title footer-title">Компания «РумТибет»</h3>
+                        <div class="footer__about-description">
+                            <p>Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney.</p>
+                        </div>
+                        <address class="footer__contacts">
+                            <a href="mailto:info@domain.com">info@domain.com</a>
+                            <a href="tel:+71234567890">7 (123) 456-78-90</a>
+                        </address>
+                        <div class="footer__icons">
+                            <a href="#" class="footer__icons-link" aria-label="Телеграм" title="Телеграм">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="none"><path fill="#fff" d="M14 .667C6.64.667.667 6.64.667 14S6.64 27.333 14 27.333 27.333 21.36 27.333 14 21.36.667 14 .667m6.187 9.066c-.2 2.107-1.067 7.227-1.507 9.587-.187 1-.56 1.333-.907 1.373-.773.067-1.36-.506-2.106-1-1.174-.773-1.84-1.253-2.974-2-1.32-.866-.466-1.346.294-2.12.2-.2 3.613-3.306 3.68-3.586a.27.27 0 0 0-.067-.24c-.08-.067-.187-.04-.28-.027-.12.027-1.987 1.267-5.627 3.72-.533.36-1.013.547-1.44.533-.48-.013-1.386-.266-2.066-.493-.84-.267-1.494-.413-1.44-.88.026-.24.36-.48.986-.733 3.894-1.694 6.48-2.814 7.774-3.347 3.706-1.547 4.466-1.813 4.973-1.813.107 0 .36.026.52.16a.53.53 0 0 1 .187.36c-.014.08.013.32 0 .506"/></svg>
+                            </a>
+                            <a href="#" class="footer__icons-link" aria-label="ВК" title="ВК">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="none"><path fill="#fff" d="M13.36 0C5.981 0 0 5.98 0 13.36s5.981 13.36 13.36 13.36 13.36-5.982 13.36-13.36C26.72 5.98 20.739 0 13.36 0m5.138 15.073s1.182 1.166 1.472 1.707q.013.02.016.028c.118.2.146.354.087.47-.097.191-.431.286-.545.294H17.44c-.144 0-.448-.037-.815-.29-.283-.198-.561-.522-.832-.838-.405-.47-.756-.877-1.11-.877a.4.4 0 0 0-.132.02c-.267.087-.61.468-.61 1.484 0 .318-.25.5-.427.5h-.956c-.325 0-2.022-.114-3.525-1.7-1.84-1.94-3.496-5.834-3.51-5.87-.104-.253.112-.388.347-.388h2.108c.282 0 .373.172.437.323.076.177.351.88.803 1.67.734 1.289 1.183 1.812 1.544 1.812a.4.4 0 0 0 .193-.05c.47-.261.383-1.938.362-2.286 0-.066-.001-.75-.242-1.079-.173-.238-.466-.328-.644-.362.072-.1.167-.18.277-.235.322-.161.904-.185 1.482-.185h.321c.626.008.788.049 1.015.106.459.11.469.406.428 1.42-.012.289-.025.614-.025.998q-.002.126-.004.268c-.014.516-.03 1.102.334 1.343a.3.3 0 0 0 .159.046c.126 0 .508 0 1.54-1.772q.479-.857.828-1.773c.021-.036.082-.148.155-.19a.4.4 0 0 1 .172-.041h2.479c.27 0 .455.04.49.145.061.165-.011.67-1.143 2.203l-.505.666c-1.026 1.345-1.026 1.413.064 2.433"/></svg>
+                            </a>
+                            <a href="#" class="footer__icons-link" aria-label="Пинтерест" title="Пинтерест">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"><path fill="#fff" d="M10.053 26.72c1.28.387 2.574.613 3.947.613A13.333 13.333 0 1 0 .667 14c0 5.667 3.56 10.533 8.586 12.453-.12-1.04-.24-2.76 0-3.946l1.534-6.587s-.387-.773-.387-2c0-1.84 1.147-3.213 2.453-3.213 1.147 0 1.68.84 1.68 1.92 0 1.146-.76 2.786-1.146 4.36-.227 1.306.693 2.453 2.026 2.453 2.374 0 4.214-2.533 4.214-6.107 0-3.2-2.294-5.386-5.587-5.386-3.76 0-5.973 2.8-5.973 5.746 0 1.147.373 2.307.986 3.067.12.08.12.187.08.387L8.747 18.6c0 .227-.147.307-.374.147C6.667 18 5.68 15.573 5.68 13.613c0-4.213 2.987-8.04 8.747-8.04 4.586 0 8.16 3.294 8.16 7.667 0 4.587-2.84 8.267-6.907 8.267-1.293 0-2.56-.694-3.013-1.507l-.894 3.16c-.306 1.147-1.146 2.68-1.72 3.6z"/></svg>
+                            </a>
+                            <a href="#" class="footer__icons-link" aria-label="Скайп" title="Скайп">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="#fff" d="M20 4c2.76 2.72 3.8 6.52 3.147 10.067.546.96.853 2.08.853 3.266A6.667 6.667 0 0 1 17.333 24a6.6 6.6 0 0 1-3.266-.853C10.52 23.8 6.72 22.76 4 20 1.24 17.28.2 13.48.853 9.933A6.6 6.6 0 0 1 0 6.667 6.667 6.667 0 0 1 6.667 0a6.6 6.6 0 0 1 3.266.853C13.48.2 17.28 1.24 20 4m-7.947 14.88c3.827 0 5.734-1.84 5.734-4.32 0-1.587-.747-3.28-3.64-3.933l-2.654-.587c-1.013-.227-2.16-.533-2.16-1.48 0-.96.8-1.627 2.267-1.627 2.973 0 2.693 2.04 4.173 2.04.774 0 1.44-.453 1.44-1.24 0-1.826-2.92-3.2-5.4-3.2-2.68 0-5.546 1.147-5.546 4.187 0 1.467.52 3.027 3.4 3.747l3.586.906c1.08.267 1.347.867 1.347 1.427 0 .907-.907 1.8-2.547 1.8-3.213 0-2.773-2.467-4.493-2.467-.773 0-1.333.534-1.333 1.294 0 1.48 1.773 3.453 5.826 3.453"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__services footer-block">
+                        <h3 class="footer__services-title footer-title footer-title--block">Наши услуги</h3>
+                        <ul class="footer__services-list">
+                            <li class="footer__services-item">
+                                <a href="#" class="footer__services-link footer-item">Прогулки в горы летом</a>
+                            </li>
+                            <li class="footer__services-item">
+                                <a href="#" class="footer__services-link footer-item">Зимние походы в горы</a>
+                            </li>
+                            <li class="footer__services-item">
+                                <a href="#" class="footer__services-link footer-item">Посещение храмов в горах</a>
+                            </li>
+                            <li class="footer__services-item">
+                                <a href="#" class="footer__services-link footer-item footer-item--new">Экстремальные виды туризма</a>
+                            </li>
+                            <li class="footer__services-item ">
+                                <a href="#" class="footer__services-link footer-item">Походы в джунглях Амазонии</a>
+                            </li>
+                            <li class="footer__services-item">
+                                <a href="#" class="footer__services-link footer-item">Поездка в Африку</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__articles footer-block">
+                        <h3 class="footer__articles-title footer-title footer-title--block">Важно для путешествий</h3>
+                        <ul class="footer__articles-list">
+                            <li class="footer__articles-item">
+                                <a href="#" class="footer__articles-link footer-item">Как собрать в долгий поход?</a>
+                            </li>
+                            <li class="footer__articles-item">
+                                <a href="#" class="footer__articles-link footer-item">Жизненно важные предметы для похода</a>
+                            </li>
+                            <li class="footer__articles-item">
+                                <a href="#" class="footer__articles-link footer-item">Медицинская страховка, гарантии безопасности</a>
+                            </li>
+                            <li class="footer__articles-item">
+                                <a href="#" class="footer__articles-link footer-item">Если вы врач - загляните сюда</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__extra">
+            <div class="footer__extra-inner container">
+                <span class="footer__copyright">ИП Константинопольский К.К., <time datetime="2023">2023</time></span>
+                <a href="#" class="footer__privacy-policy">Политика обработки персональных данных</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
